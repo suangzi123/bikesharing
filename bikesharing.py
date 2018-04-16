@@ -27,6 +27,7 @@ Rain_registered=Rain_counts["registered"].sum()
 
 
 
+
 index=["Clear","Mist","Snow","Rain"]
 values1=[Clear_registered,Mist_registered,Snow_registered,Rain_registered]
 values2=[Clear_casual,Mist_casual,Snow_casual,Rain_casual]
