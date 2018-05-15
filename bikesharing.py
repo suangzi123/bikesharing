@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-dataframe=pd.read_csv("train.csv")
+dataframe=pd.read_csv("D:\\bikesharing\\data\\train.csv")
 sns.set()
 
 
@@ -36,7 +36,7 @@ dataframe=dataframe[dataframe["count"]>lower_bound]
 
 
 #Correlation matrix
-corr_data=dataframe[['hour','month','temp','atemp','humidity','windspeed','casual','registered','count']]
+corr_data=dataframe[['temp','atemp','humidity','windspeed','casual','registered','count']]
 corr = corr_data.corr()
 corr=corr.round(2)
 f, ax = plt.subplots(figsize=(9, 6))
