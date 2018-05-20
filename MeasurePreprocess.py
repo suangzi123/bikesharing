@@ -15,6 +15,7 @@ def GetData():
     scaler = StandardScaler()
     scaler.fit(X)
     X=scaler.transform(X)
+    X=X[:,[2,3,9,12,13,14]]
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.01, random_state=0)
     return X_train, X_test, y_train, y_test
 
@@ -35,5 +36,13 @@ def WindspeedPolynomialRegression():
     y = dataset.iloc[:, 0].values
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.01, random_state=0)
     return X_train, X_test, y_train, y_test
+
+def ErrorRate(test,pred):
+    avg=[]
+    for i,j in zip(list(test),list(pred)):
+        avg.append(abs(float(i-j))/float(i))
+    avg=np.array(avg)
+    return avg.mean()
+    
 
     
