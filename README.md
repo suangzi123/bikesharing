@@ -33,5 +33,7 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
 ![](https://github.com/suangzi123/bikesharing/blob/master/images/Hour_statistics.png)<br>
  This picture show the different numbers of user count per hour in different weather.There will be more users in good weather and the morning peak is at eight in the morning and the evening peak is at seventeen in the evening
  * Month statistics
- ![](https://github.com/suangzi123/bikesharing/blob/master/images/Month_statistics.png)<br>
+ 
+ ![](https://github.com/suangzi123/bikesharing/blob/master/images/Month_statistics.png)
+ 
  This picture show the mean of user count per hour in different month and different weather.There are more users in summer and fall and less in spring and winter.January has the fewest users.
