@@ -8,23 +8,22 @@ import numpy as np
 import pandas as pd
 from sklearn import metrics
 import matplotlib.pyplot as plt
-import seaborn as sns
 import scipy
 import MeasurePreprocess
-sns.set()
+
 
 
 X_train, X_test, y_train, y_test=MeasurePreprocess.GetData()
 linreg = LinearRegression()
 scores = cross_val_score(linreg, X_test,y_test, cv=10)
 print "Cross validation scores:",scores
-#Cross validation scores: [ 0.39861152  0.29279047 -0.23444094  0.33524775 -0.66794863  0.22375366  0.37918367 -0.22291575 -0.26410568 -0.07763031]
+#Cross validation scores: [ 0.58255357  0.57289505  0.64241995  0.59190076  0.66598944  0.59132919  0.64471031  0.6490007   0.64190622  0.60148136]
 linreg.fit(X_train, y_train)
 y_pred = linreg.predict(X_test)
 print "MSE:",metrics.mean_squared_error(y_test, y_pred)
 print "Error rate:",MeasurePreprocess.ErrorRate(y_test,y_pred)
-#MSE: 24062.8589904
-#Error rate: 6.4601698913
+#MSE: 10325.9644869
+#Error rate: 2.36005605451
 
 
 # Visualising the predicted results
@@ -36,38 +35,38 @@ plt.title("Linear Regression predicted results")
 plt.show()
 
 
-#Linear regression for windspeed feature.
-x0_train, x0_test, y0_train, y0_test=MeasurePreprocess.GetWindspeedData()
+#Linear regression for hour feature.
+x0_train, x0_test, y0_train, y0_test=MeasurePreprocess.GetHourData()
 
 linreg=LinearRegression()
 x0_train=x0_train.reshape(-1, 1)
 x0_test=x0_test.reshape(-1, 1)
 scores = cross_val_score(linreg, x0_test,y0_test, cv=10)
 print "Cross validation scores:",scores
-#Cross validation scores: [ 0.00659087 -0.23267376 -0.08699674  0.0291493  -0.57398698  0.00798402  -0.0081969  -0.00079042 -0.12915215 -0.02080022]
+#Cross validation scores: [ 0.14100185  0.14447664  0.11616706  0.22160484  0.11910182  0.14844926  0.16447769  0.18203852  0.12086551  0.18053057]
 linreg.fit(x0_train,y0_train)
 y0_pre=linreg.predict(x0_test)
 print "gradient:",linreg.coef_
-#gradient: [ 2.28489923]
+#gradient: [ 10.4745815]
 print "intercept:",linreg.intercept_
-#intercept: 162.172338362
+#intercept: 69.8361082142
 print "MSE:",metrics.mean_squared_error(y0_test, y0_pre)
-#MSE: 31058.1710239
+#MSE: 28013.0003656
 print "Error rate:",MeasurePreprocess.ErrorRate(y0_test,y0_pre)
-#Error rate: 10.0986768469
+#Error rate: 4.81197893906
 
 
 #Windspeed Polynomial Regression
-x_train, x_test, y_train, y_test=MeasurePreprocess.WindspeedPolynomialRegression()
+x_train, x_test, y_train, y_test=MeasurePreprocess.HourPolynomialRegression()
 linreg = LinearRegression()
 
 scores = cross_val_score(linreg, x_test,y_test, cv=10)
 print "Cross validation scores:",scores
-#Cross validation scores: [ -1.73749282e-01  -2.62752233e-01  -6.48312719e-02   1.63664982e-02   -3.25006570e+00   2.68568790e-03  -5.61825438e-03  -2.84347108e-02   -1.77784773e-01  -8.76974810e-03]
+#Cross validation scores: [ 0.40211768  0.37545973  0.2889311   0.48806122  0.36187756  0.38482698  0.34199924  0.3731043   0.35835942  0.3766743 ]
 linreg.fit(x_train, y_train)
 y_pred = linreg.predict(x_test)
-print "Windspeed Polynomial Regression MSE:",metrics.mean_squared_error(y_test, y_pred)
-#Windspeed Polynomial Regression MSE: 31032.8561746
+print "Hour Polynomial Regression MSE:",metrics.mean_squared_error(y_test, y_pred)
+#Hour Polynomial Regression MSE:  20698.3456185
 print "Error rate:",MeasurePreprocess.ErrorRate(y_test,y_pred)
-#Error rate: 10.1412484243
+#Error rate: 2.49101714254
 
