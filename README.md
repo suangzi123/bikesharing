@@ -24,11 +24,14 @@ This project makes use of  historical usage patterns and weather data to forecas
 
 # Data visualization
 * The distribution of the number of users per hour
-![](https://github.com/suangzi123/bikesharing/blob/master/images/Count_distribution.png)
+![](https://github.com/suangzi123/bikesharing/blob/master/images/Count_distribution.png)<br>
 A total of 10886 samples and the samples outside 3 std account for less than 1% of data.The outlier data will be filtered out.
 * Correlation matrix
-![](https://github.com/suangzi123/bikesharing/blob/master/images/Correlation_matrix.png)
-There are no obvious linear relationship among temperature，humidity,windspeed and user count.
+![](https://github.com/suangzi123/bikesharing/blob/master/images/Correlation_matrix.png)<br>
+There are no obvious linear relationship among temperature,humidity,windspeed and user count.
 * Hours mean statistics with weather
-![](https://github.com/suangzi123/bikesharing/blob/master/images/Hour_statistics.png)
- 
+![](https://github.com/suangzi123/bikesharing/blob/master/images/Hour_statistics.png)<br>
+ This picture show the different numbers of user count per hour in different weather.There will be more users in good weather and the morning peak is at eight in the morning and the evening peak is at seventeen in the evening
+ * Month statistics
+ ![](https://github.com/suangzi123/bikesharing/blob/master/images/Month_statistics.png)<br>
+ This picture show the mean of user count per hour in different month and different weather.There are more users in summer and fall and less in spring and winter.January has the fewest users.
