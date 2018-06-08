@@ -39,5 +39,7 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
  This picture show the mean of user count per hour in different month and different weather.January has the fewest users.
  
  * Season statistics
+ 
  ![](https://github.com/suangzi123/bikesharing/blob/master/images/Season_statistics.png)
+ 
   This picture show the user count in different season and different weather.There are more users in summer and fall and less in spring and winter.
