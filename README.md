@@ -28,4 +28,7 @@ This project makes use of  historical usage patterns and weather data to forecas
 A total of 10886 samples and the samples outside 3 std account for less than 1% of data.The outlier data will be filtered out.
 * Correlation matrix
 ![](https://github.com/suangzi123/bikesharing/blob/master/images/Correlation_matrix.png)
-A non-linear relationship between 
+There are no obvious linear relationship among temperature，humidity,windspeed and user count.
+* Hours mean statistics with weather
+![](https://github.com/suangzi123/bikesharing/blob/master/images/Hour_statistics.png)
+ 
