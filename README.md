@@ -43,3 +43,10 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
  ![](https://github.com/suangzi123/bikesharing/blob/master/images/Season_statistics.png)
  
   This picture show the user count in different season and different weather.There are more users in summer and fall and less in spring and winter.
+  
+  # Regression
+  Choosing the appropriate model for regression by comparing the accuracy of different regression models.After trying multiple linear regression, poly linear regression, SVR, Decision Tree regression,Random Forest regression,XGRegressor and select optimal parameter by grid search,XGRegressor gives the maximum  k-fold R2 score [ 0.83592285  0.83862756  0.83806972  0.83190081  0.8472441 ]and minimum mean square error(4414.09082941).
+  * XGBoost regression predicted results in testing set
+  
+  ![](https://github.com/suangzi123/bikesharing/blob/master/images/XGBoost_Regression_predicted_results.png)
+  
