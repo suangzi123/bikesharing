@@ -50,3 +50,6 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   
   ![](https://github.com/suangzi123/bikesharing/blob/master/images/XGBoost_Regression_predicted_results.png)
   
+  # Conclusion
+  In this project,I learned data visualization,data analysis，data preprocessing,selecting models and optimization parameters.In the future,I will continue to learn the data science in a specialized field.
+  
