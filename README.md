@@ -49,7 +49,7 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   
   * Linear Regression
   
-  Multiple linear regression gave k-fold R2 score:0.61841 and mse:10011.33622.In order to eliminate collinearity of independent variables,using ridge regression and applying GridSearchCV for optimal parameter "alpha"=1.5(Regularization strength).Ridge regression gave k-fold R2 score:0.62404 and mse:10331.75954. At the same time, linear regression prediction is made using backward estimated data,which gave result  k-fold R2 score:0.61899 and mse:10017.96790.
+  Multiple linear regression gave k-fold R2 score:0.61841 and mse:10011.33622.In order to eliminate collinearity of independent variables,using ridge regression and applying GridSearchCV for optimal parameter "alpha"=1.5(Regularization strength).Ridge regression gave k-fold R2 score:0.62404 and mse:10331.75954. At the same time, Using backward estimation before regression,which gave result  k-fold R2 score:0.61899 and mse:10017.96790.
   ![](https://github.com/suangzi123/bikesharing/blob/master/images/Linear_Regression_predicted_result.png)
   
   * XGBoost regression predicted results in testing set
