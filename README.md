@@ -45,7 +45,7 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   This picture show the user count in different season and different weather.There are more users in summer and fall and less in spring and winter.
   
   # Regression
-  Choosing the appropriate model for regression by respectively comparing the accuracy of different regression models and using grid search method based on k fold cross validation error for selecting the model parameters.
+  Firstly preprocess the data,filter out the outlier data and Adding dummy varibles for categorical feature 'season' 'holiday' 'workingday' 'weather' 'hour' 'month'.Then choosing the appropriate model for regression by respectively comparing the accuracy of different regression models and using grid search method based on k fold cross validation error for selecting the model parameters.
   
   * Linear Regression
   
@@ -64,10 +64,11 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   
  Regression analysis using random forest method and select optimal parameter by grid search.Firstly,determine the parameter 'n_estimators'=100(The number of trees in the forest).Then determine the parameters 'max_features'= 0.6(The number of features to consider when looking for the best split), 'max_depth'= 26(The maximum depth of the tree).Random forest fegression gave k-fold R2 score: 0.82300 , mse: 4818.77715 and error rate: 0.65858.
   
-  * XGBoost regression predicted results in testing set
+  * XGBoost 
+  
+  Using XGRegressor to regression prediction.Selecting optimal parameter by grid search,'max_depth'= 10(The maximum depth of the tree), 'min_child_weight'= 8(Minimum leaf node sample weight),'colsample_bytree'= 0.8(The ratio of the number of columns sampled at random), 'gamma'= 4(The minimum loss function required for node splitting).XGRegressor gives the maximum  k-fold R2 score:  0.83835 , minimum mean square error: 4414.09082 and error rate: 0.63869
   
   ![](https://github.com/suangzi123/bikesharing/blob/master/images/XGBoost_Regression_predicted_result.png)
   
   # Conclusion
-  In this project,I learned data visualization,data analysis,data preprocessing,selecting models and optimization parameters.In the future,I will continue to learn the data science in a specialized field.
-  
+  In this project,I learned data visualization,data analysis,data preprocessing,selecting models and optimization parameters.As the data  distribution is skewed,the future work of this project is trying to transform this data using log transformation,then importing different models.
