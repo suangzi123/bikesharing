@@ -45,7 +45,13 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   This picture show the user count in different season and different weather.There are more users in summer and fall and less in spring and winter.
   
   # Regression
-  Choosing the appropriate model for regression by comparing the accuracy of different regression models.After trying multiple linear regression, poly linear regression, SVR, Decision Tree regression,Random Forest regression,XGRegressor and select optimal parameter by grid search,XGRegressor gives the maximum  k-fold R2 score [ 0.83592285  0.83862756  0.83806972  0.83190081  0.8472441 ]and minimum mean square error(4414.09082941)in testing set.
+  Choosing the appropriate model for regression by respectively comparing the accuracy of different regression models and using grid search method based on k fold cross validation error for selecting the model parameters.
+  
+  * Linear Regression
+  
+  Multiple linear regression gave k-fold R2 score:0.61841 and mse:10011.33622.In order to eliminate collinearity of independent variables,using ridge regression and applying GridSearchCV for optimal parameter "alpha"=1.5(Regularization strength).Ridge regression gave k-fold R2 score:0.62404 and mse:10331.75954. At the same time, linear regression prediction is made using backward estimated data,which gave result  k-fold R2 score:0.61899 and mse:10017.96790.
+  ![](https://github.com/suangzi123/bikesharing/blob/master/images/Linear_Regression_predicted_result.png)
+  
   * XGBoost regression predicted results in testing set
   
   ![](https://github.com/suangzi123/bikesharing/blob/master/images/XGBoost_Regression_predicted_result.png)
