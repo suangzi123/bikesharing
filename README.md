@@ -49,8 +49,20 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   
   * Linear Regression
   
-  Multiple linear regression gave k-fold R2 score:0.61841 and mse:10011.33622.In order to eliminate collinearity of independent variables,using ridge regression and applying GridSearchCV for optimal parameter "alpha"=1.5(Regularization strength).Ridge regression gave k-fold R2 score:0.62404 and mse:10331.75954. At the same time, Using backward estimation before regression,which gave result  k-fold R2 score:0.61899 and mse:10017.96790.
+  Multiple linear regression gave k-fold R2 score: 0.61841 and mse: 10011.33622.In order to eliminate collinearity of independent variables,using ridge regression and applying grid search for optimal parameter "alpha"=1.5(Regularization strength).Ridge regression gave k-fold R2 score: 0.62404 and mse: 10331.75954. At the same time, Using backward estimation before regression,which gave result  k-fold R2 score: 0.61899 and mse: 10017.96790.
   ![](https://github.com/suangzi123/bikesharing/blob/master/images/Linear_Regression_predicted_result.png)
+  
+  * SVR
+  
+  Using support vector regression to predict the number of users.Training SVR by selecting Gaussian kernel function and applying grid search for optimal parameter "C"=2000(Penalty parameter C of the error term),"epsilon"=0.1(Epsilon in the epsilon-SVR model).SVR gave k-fold R2 score: 0.63185 and mse: 9382.43674
+  
+  * Decision Tree
+  
+  Regression prediction using decision tree regression.applying grid search for optimal parameter "'min_samples_split'"=0.02(The minimum number of samples required to split an internal node).Decision tree regression gave k-fold R2 score: 0.61579 and mse: 9095.94262.
+  
+  * Random Forest Regression
+  
+ Regression analysis using random forest method and select optimal parameter by grid search.Firstly,determine the parameter 'n_estimators'=100(The number of trees in the forest).Then determine the parameters 'max_features'= 0.6(The number of features to consider when looking for the best split), 'max_depth'= 26(The maximum depth of the tree).Random forest fegression gave k-fold R2 score: 0.82300 , mse: 4818.77715 and error rate: 0.65858.
   
   * XGBoost regression predicted results in testing set
   
