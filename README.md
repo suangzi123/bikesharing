@@ -48,7 +48,7 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   Choosing the appropriate model for regression by comparing the accuracy of different regression models.After trying multiple linear regression, poly linear regression, SVR, Decision Tree regression,Random Forest regression,XGRegressor and select optimal parameter by grid search,XGRegressor gives the maximum  k-fold R2 score [ 0.83592285  0.83862756  0.83806972  0.83190081  0.8472441 ]and minimum mean square error(4414.09082941)in testing set.
   * XGBoost regression predicted results in testing set
   
-  ![](https://github.com/suangzi123/bikesharing/blob/master/images/XGBoost_Regression_predicted_results.png)
+  ![](https://github.com/suangzi123/bikesharing/blob/master/images/XGBoost_Regression_predicted_result.png)
   
   # Conclusion
   In this project,I learned data visualization,data analysis,data preprocessing,selecting models and optimization parameters.In the future,I will continue to learn the data science in a specialized field.
