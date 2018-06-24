@@ -45,7 +45,7 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   This picture show the user count in different season and different weather.There are more users in summer and fall and less in spring and winter.
   
   # Regression
-  Firstly preprocess the data,filter out the outlier data and Adding dummy varibles for categorical feature 'season' 'holiday' 'workingday' 'weather' 'hour' 'month'.Then choosing the appropriate model for regression by respectively comparing the accuracy of different regression models and using grid search method based on k fold cross validation error for selecting the model parameters.
+  Firstly preprocess the data,filter out the outlier data and adding dummy varibles for categorical feature 'season' 'holiday' 'workingday' 'weather' 'hour' 'month'.Then choosing the appropriate model for regression by respectively comparing the accuracy of different regression models and using grid search method based on k fold cross validation error for selecting the model parameters.
   
   * Linear Regression
   
