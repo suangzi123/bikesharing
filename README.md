@@ -71,4 +71,4 @@ There are no obvious linear relationship among temperature,humidity,windspeed an
   ![](https://github.com/suangzi123/bikesharing/blob/master/images/XGBoost_Regression_predicted_result.png)
   
   # Conclusion
-  In this project,I learned data visualization,data analysis,data preprocessing,selecting models and optimization parameters.As the data  distribution is skewed,the future work of this project is trying to transform this data using log transformation,then importing different models.
+  In this project,processing data through data visualization,data analysis,data preprocessing,selecting models and optimization parameters.As the data  distribution is skewed,the future work of this project is trying to transform this data using log transformation,then importing different models.
